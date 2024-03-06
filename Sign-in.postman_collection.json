@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "1e081e4c-26b9-4a8b-8332-9f74ef8d8726",
+		"name": "Sign-in",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26244058",
+		"_collection_link": "https://crimson-rocket-490612.postman.co/workspace/E-c0mmerce-S-2~9628bee6-c992-47cf-bc52-9ecd885b355d/collection/26244058-1e081e4c-26b9-4a8b-8332-9f74ef8d8726?action=share&source=collection_link&creator=26244058"
+	},
+	"item": [
+		{
+			"name": "Positive",
+			"item": [
+				{
+					"name": "As a user, I want to sign-in with my email and password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"password\": \"any\",\r\n  \"email\": \"any\"\r\n}"
+						},
+						"url": {
+							"raw": "https://staging-be-ecom.techserve4u.com/api/user/signin",
+							"protocol": "https",
+							"host": [
+								"staging-be-ecom",
+								"techserve4u",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Negative",
+			"item": [
+				{
+					"name": "As a user, I don't want to sign-in with my  wrong email and password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"password\": \"1234\",\r\n  \"email\": \"mdtaher@yahoo.com\"\r\n}"
+						},
+						"url": {
+							"raw": "https://staging-be-ecom.techserve4u.com/api/user/signin",
+							"protocol": "https",
+							"host": [
+								"staging-be-ecom",
+								"techserve4u",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "As a user, I don't want to sign-in with my  invalid email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"password\": \"1234\",\r\n  \"email\": \"mdtaher@yahoo.com\"\r\n}"
+						},
+						"url": {
+							"raw": "https://staging-be-ecom.techserve4u.com/api/user/signin",
+							"protocol": "https",
+							"host": [
+								"staging-be-ecom",
+								"techserve4u",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
