@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "f4422213-ec4a-47de-ae8d-fb319c26b565",
+		"name": "Sign-up",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26244058",
+		"_collection_link": "https://crimson-rocket-490612.postman.co/workspace/E-c0mmerce-S-2~9628bee6-c992-47cf-bc52-9ecd885b355d/collection/26244058-f4422213-ec4a-47de-ae8d-fb319c26b565?action=share&source=collection_link&creator=26244058"
+	},
+	"item": [
+		{
+			"name": "Positive",
+			"item": [
+				{
+					"name": "As a user , I want to sign-up",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"reknesulmo@gufum.com\",\r\n  \"name\": \"Md Taher\",\r\n  \"password\": \"Dhaka923348\"\r\n}"
+						},
+						"url": {
+							"raw": "https://staging-be-ecom.techserve4u.com/api/user/signup",
+							"protocol": "https",
+							"host": [
+								"staging-be-ecom",
+								"techserve4u",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"signup"
+							]
+						},
+						"description": "Date: 02/29/2024  \nProject Name: Single Owner eCommerce  \nTested By:Taher  \nReviewed By: Pranto  \nSE Name: Shimul  \nObjective: Buyer should be signup with email and password.  \nExpected Result: Buyer can signup with email and password.  \nActual Result: Buyer can signup.  \nTest Status: Passed  \nTest Data:\n\nemail:[reknesulmo@gufum.com](https://mailto:reknesulmo@gufum.com)  \npassword:Dhaka923348"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Negative",
+			"item": [
+				{
+					"name": "As a user , I don't want to sign-up with invalid email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"abu_taher.com\",\r\n  \"name\": \"any\",\r\n  \"password\": \"1234567\"\r\n}"
+						},
+						"url": {
+							"raw": "https://staging-be-ecom.techserve4u.com/api/user/signup",
+							"protocol": "https",
+							"host": [
+								"staging-be-ecom",
+								"techserve4u",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"signup"
+							]
+						},
+						"description": "Date: 02/29/2024  \nProject Name: Single Owner eCommerce  \nTested By:Taher  \nReviewed By: Pranto  \nSE Name: Shimul  \nObjective: Buyer should be to signup with invalid email and password.  \nExpected Result: Buyer can not signup.  \nActual Result: Buyer can not signup.  \nTest Status: Passed  \nTest Data:\n\nemail:[reknesulmo@gufum.com](https://mailto:reknesulmo@gufum.com)  \npassword:Dhaka923348"
+					},
+					"response": []
+				},
+				{
+					"name": "As a user , I don't want to sign-up with four digit password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"any\",\r\n  \"name\": \"any\",\r\n  \"password\": \"any\"\r\n}"
+						},
+						"url": {
+							"raw": "https://staging-be-ecom.techserve4u.com/api/user/signup",
+							"protocol": "https",
+							"host": [
+								"staging-be-ecom",
+								"techserve4u",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
